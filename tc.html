@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Personal FinanceTracker</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-blue-700 to-indigo-900 text-white py-8 shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Terms of Service</h1>
+            <p class="mt-2 text-lg sm:text-xl">for Personal FinanceTracker</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+        
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-800">Introduction</h2>
+            <p class="mb-4">Welcome to Personal FinanceTracker! These Terms of Service ("Terms") govern your use of the Personal FinanceTracker tool, provided by Fred Anziko. By accessing or using our tool, you agree to be bound by these Terms.</p>
+        </section>
+
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-800">1. Description of Service</h2>
+            <p class="mb-4">The Personal FinanceTracker is a financial management tool built on Google Sheets and Google Forms. It is designed to help you track your income and expenses. The service includes providing you with access to a master Google Sheet file and direct support.</p>
+        </section>
+
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-800">2. User Responsibilities</h2>
+            <ul class="list-disc list-inside space-y-2 pl-4">
+                <li>You are responsible for safeguarding your personal copy of the Google Sheet, as it contains your personal financial data.</li>
+                <li>You agree not to redistribute or sell the Personal FinanceTracker master file to others.</li>
+                <li>You acknowledge that your financial data is stored securely in your personal Google Drive and not on our servers.</li>
+            </ul>
+        </section>
+
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-800">3. Payment and Access</h2>
+            <p class="mb-4">Access to the Personal FinanceTracker master file is granted for a one-time fee. Upon successful payment, you will receive editor access to the master file, which allows you to create your own copy. This fee is non-refundable.</p>
+        </section>
+
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-800">4. Disclaimer of Warranties</h2>
+            <p class="mb-4">The Personal FinanceTracker is provided "as is" without any warranties, express or implied. We do not guarantee that the tool will meet your specific needs or that its operation will be error-free. The financial information provided is for tracking purposes only and should not be considered professional financial advice.</p>
+        </section>
+
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-800">5. Limitation of Liability</h2>
+            <p class="mb-4">In no event shall Fred Anziko be liable for any damages, including but not limited to, loss of data or financial loss, arising from your use of or inability to use the Personal FinanceTracker.</p>
+        </section>
+        
+        <section class="bg-white p-6 sm:p-8 rounded-xl shadow-md">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-800">6. Changes to the Terms</h2>
+            <p class="mb-4">We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms of Service on this page. Your continued use of the tool after such changes constitutes your acceptance of the new Terms.</p>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center mt-12">
+        <p>&copy; <span id="current-year"></span> Personal FinanceTracker. All rights reserved.</p>
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+</body>
+</html>
