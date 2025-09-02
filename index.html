@@ -24,7 +24,7 @@
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
-   
+    
     <!-- Header & Hero Section -->
     <header class="relative overflow-hidden pt-12 md:pt-24 bg-gradient-to-br from-blue-700 to-indigo-900 text-white">
         <div class="container mx-auto px-4 py-20 text-center">
@@ -38,23 +38,26 @@
                 Take Control of Your Financial Future Today.
             </p>
              <!-- Audio Player Section at the very top -->
-    <div class="bg-blue-600 text-white py-3 px-4 text-center">
-        <div class="container mx-auto flex items-center justify-center space-x-4">
-            <span class="text-sm sm:text-base font-semibold">Listen to a short intro on building wealth:</span>
-            <button id="play-audio-button" class="inline-flex items-center bg-white text-blue-600 font-bold py-2 px-4 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300">
-                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
-                </svg>
-                Listen Now
-            </button>
-            <!-- Hidden audio element -->
-            <audio id="audio-player" class="hidden-audio-player">
-                <source src="https://drive.google.com/file/d/1bOb-qEfU89qTe_porut2pHTNiyYEjpw9/preview" type="audio/mp4">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-    </div>
-        <a href="https://gidlerblog.blogspot.com/2025/08/the-quiet-drip-gen-z-guide-to-building.html" target="_blank" class="inline-block w-full sm:w-auto text-center bg-white text-blue-600 font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-gray-200 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 my-4">
+             <div class="bg-blue-600 text-white py-3 px-4 text-center">
+                 <div class="container mx-auto flex items-center justify-center space-x-4">
+                     <span class="text-sm sm:text-base font-semibold">Listen to a short intro on building wealth:</span>
+                     <button id="play-audio-button" class="inline-flex items-center bg-white text-blue-600 font-bold py-2 px-4 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300">
+                         <svg class="w-5 h-5 mr-2" id="play-icon" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                         </svg>
+                         <svg class="w-5 h-5 mr-2 hidden" id="pause-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4-1a1 1 0 011 1v2a1 1 0 11-2 0V9a1 1 0 011-1z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span id="button-text">Listen Now</span>
+                     </button>
+                     <!-- Hidden audio element -->
+                     <audio id="audio-player" class="hidden-audio-player">
+                         <source src="https://drive.google.com/file/d/1bOb-qEfU89qTe_porut2pHTNiyYEjpw9/preview" type="audio/mp4">
+                         Your browser does not support the audio element.
+                     </audio>
+                 </div>
+             </div>
+            <a href="https://gidlerblog.blogspot.com/2025/08/the-quiet-drip-gen-z-guide-to-building.html" target="_blank" class="inline-block w-full sm:w-auto text-center bg-white text-blue-600 font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-gray-200 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 my-4">
                 Read The Book Here
             </a>
             <br>
@@ -194,13 +197,13 @@
                     </p>
                 </div>
             
-             <div class="mt-8 text-center sm:text-left">
-                <a href="privacy.html" class="hover:underline mx-2">Privacy Policy</a>
-                <span class="mx-2 text-gray-600">|</span>
-                <a href="tc.html" class="hover:underline mx-2">Terms of Service</a>
-                <p class="text-center sm:text-left text-sm text-gray-500 mt-4">&copy; <span id="current-year"></span> Personal FinanceTracker. All rights reserved.</p>
+                <div class="mt-8 text-center sm:text-left">
+                    <a href="privacy.html" class="hover:underline mx-2">Privacy Policy</a>
+                    <span class="mx-2 text-gray-600">|</span>
+                    <a href="tc.html" class="hover:underline mx-2">Terms of Service</a>
+                    <p class="text-center sm:text-left text-sm text-gray-500 mt-4">&copy; <span id="current-year"></span> Personal FinanceTracker. All rights reserved.</p>
+                </div>
             </div>
-           </div> 
         </div>
     </footer>
     
@@ -236,7 +239,40 @@
             document.getElementById('notification-modal').classList.add('hidden');
             document.getElementById('notification-modal').classList.remove('flex');
         }
-    </script>
+        
+        // This script handles the audio player functionality
+        window.onload = function() {
+            const audioPlayer = document.getElementById('audio-player');
+            const playButton = document.getElementById('play-audio-button');
+            const buttonText = document.getElementById('button-text');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
 
+            // Play/Pause functionality on button click
+            playButton.addEventListener('click', function() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    buttonText.textContent = 'Pause';
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                } else {
+                    audioPlayer.pause();
+                    buttonText.textContent = 'Listen Now';
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                }
+            });
+
+            // Reset button when audio ends
+            audioPlayer.addEventListener('ended', function() {
+                buttonText.textContent = 'Listen Now';
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            });
+
+            // Set the current year for the footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        };
+    </script>
 </body>
 </html>
