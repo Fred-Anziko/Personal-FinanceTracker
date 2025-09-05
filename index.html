@@ -22,6 +22,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
+<script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="HBLKGKQMSYA98"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
     
@@ -110,7 +111,7 @@
                 <p class="text-gray-700 font-medium leading-relaxed mb-4">
                     After payment, you'll be granted editor permission. Click the button below to get your own copy of the Financial Tracker & Statement in Google Sheets and follow the instructions for copying, publishing, and using.
                 </p>
-                <a href="https://docs.google.com/spreadsheets/d/1Yvd37--PtqmLMWrme8Ng-saYigR3Oqfx7ZW1vNXOGUA/copy" target="_blank" class="inline-block cta-button bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300">
+                <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
                     Get Your Copy Here
                 </a>
             </div>
@@ -147,9 +148,7 @@
                             <p class="text-gray-700 font-medium leading-relaxed mb-4">
                                 After payment, you'll be granted editor permission. Click the button below to get your own copy of the Financial Tracker & Statement in Google Sheets and follow the instructions for copying, publishing, and using.
                             </p>
-                            <a href="https://docs.google.com/spreadsheets/d/1Yvd37--PtqmLMWrme8Ng-saYigR3Oqfx7ZW1vNXOGUA/copy" target="_blank" class="inline-block cta-button bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300">
-                                Get Your Copy Here
-                            </a>
+                           <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
                         </div>
                     </div>
                     <div class="mb-8">
@@ -215,6 +214,9 @@
             <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">OK</button>
         </div>
     </div>
+    <script>
+  cartPaypal.Cart({ id: "pp-view-cart" })
+   </script>
 
     <script>
         function copyPaymentInfo() {
