@@ -105,20 +105,20 @@
                     After payment, you'll be granted editor permission. Click the button below to purchase your financial tracker.
                 </p>
                 
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="anzikofred@gmail.com">
-                    <input type="hidden" name="item_name" value="Personal FinanceTracker Tool">
-                    <input type="hidden" name="amount" value="3.50">
-                    <input type="hidden" name="currency_code" value="USD">
-                    <input type="hidden" name="return" value="https://docs.google.com/spreadsheets/d/1Yvd37--PtqmLMWrme8Ng-saYigR3Oqfx7ZW1vNXOGUA/copy">
-                    <input type="hidden" name="cancel_return" value="[Your Cancellation URL]">
-                    <button
-                        type="submit"
-                        class="cta-button w-full sm:w-auto bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Buy Now with PayPal
-                    </button>
-                </form>
+               <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                   <input type="hidden" name="cmd" value="_xclick">
+                   <input type="hidden" name="business" value="anzikofred@gmail.com">
+                   <input type="hidden" name="item_name" value="Personal FinanceTracker Tool">
+                   <input type="hidden" name="amount" value="3.50">
+                   <input type="hidden" name="currency_code" value="USD">
+                   <input type="hidden" name="return" value="https://fred-anziko.github.io/Personal-FinanceTracker/thank_you.html">
+                   <input type="hidden" name="notify_url" value="https://your-app-name.onrender.com/paypal-listener">
+                   <button
+                       type="submit"
+                       class="cta-button w-full sm:w-auto bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                       Buy Now with PayPal
+                   </button>
+               </form>
 
             </div>
             
