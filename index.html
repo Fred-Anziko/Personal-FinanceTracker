@@ -1,280 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal FinanceTracker - Take Control of Your Finances</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .cta-button {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal FinanceTracker - Take Control of Your Finances</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .cta-button {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="HBLKGKQMSYA98"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
-    
-    <!-- Header & Hero Section -->
-    <header class="relative overflow-hidden pt-12 md:pt-24 bg-gradient-to-br from-blue-700 to-indigo-900 text-white">
-        <div class="container mx-auto px-4 py-20 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight rounded-xl">
-                Personal FinanceTracker
-            </h1>
-            <p class="text-lg sm:text-xl md:text-2xl opacity-90 mb-8 rounded-lg">
-                Are your purchases building a foundation of assets or a mountain of liabilities?
-            </p>
-            <p class="text-xl sm:text-2xl lg:text-3xl font-medium mb-12 rounded-lg">
-                Take Control of Your Financial Future Today.
-            </p>
-             <!-- Audio Player Section at the very top -->
-             <div class="bg-blue-600 text-white py-3 px-4 text-center">
-                 <div class="container mx-auto flex items-center justify-center space-x-4">
-                     <span class="text-sm sm:text-base font-semibold">Listen to a short intro on building wealth:</span>
-                     <button id="play-audio-button" class="inline-flex items-center bg-white text-blue-600 font-bold py-2 px-4 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300">
-                         <svg class="w-5 h-5 mr-2" id="play-icon" fill="currentColor" viewBox="0 0 20 20">
-                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
-                         </svg>
-                         <svg class="w-5 h-5 mr-2 hidden" id="pause-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4-1a1 1 0 011 1v2a1 1 0 11-2 0V9a1 1 0 011-1z" clip-rule="evenodd"></path>
-                         </svg>
-                         <span id="button-text">Listen Now</span>
-                     </button>
-                     <!-- Hidden audio element -->
-                     <audio id="audio-player" class="hidden-audio-player">
-                         <source src="https://drive.google.com/file/d/1bOb-qEfU89qTe_porut2pHTNiyYEjpw9/preview" type="audio/mp4">
-                         Your browser does not support the audio element.
-                     </audio>
-                 </div>
-             </div>
-            <a href="https://gidlerblog.blogspot.com/2025/08/the-quiet-drip-gen-z-guide-to-building.html" target="_blank" class="inline-block w-full sm:w-auto text-center bg-white text-blue-600 font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-gray-200 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 my-4">
-                Read The Book Here
-            </a>
-            <br>
-            <br>
-            <br>
-            <a href="#purchase" class="cta-button inline-block bg-white text-blue-700 font-bold py-4 px-10 rounded-full text-lg shadow-xl hover:bg-gray-200 transition-all duration-300">
-                Get Started Now
-            </a>
-        </div>
-    </header>
+    
+        <header class="relative overflow-hidden pt-12 md:pt-24 bg-gradient-to-br from-blue-700 to-indigo-900 text-white">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight rounded-xl">
+                Personal FinanceTracker
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl opacity-90 mb-8 rounded-lg">
+                Are your purchases building a foundation of assets or a mountain of liabilities?
+            </p>
+            <p class="text-xl sm:text-2xl lg:text-3xl font-medium mb-12 rounded-lg">
+                Take Control of Your Financial Future Today.
+            </p>
+                          <div class="bg-blue-600 text-white py-3 px-4 text-center">
+                 <div class="container mx-auto flex items-center justify-center space-x-4">
+                     <span class="text-sm sm:text-base font-semibold">Listen to a short intro on building wealth:</span>
+                     <button id="play-audio-button" class="inline-flex items-center bg-white text-blue-600 font-bold py-2 px-4 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300">
+                         <svg class="w-5 h-5 mr-2" id="play-icon" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                         </svg>
+                         <svg class="w-5 h-5 mr-2 hidden" id="pause-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 9a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zm4-1a1 1 0 011 1v2a1 1 0 11-2 0V9a1 1 0 011-1z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span id="button-text">Listen Now</span>
+                     </button>
+                                          <audio id="audio-player" class="hidden-audio-player">
+                         <source src="https://drive.google.com/file/d/1bOb-qEfU89qTe_porut2pHTNiyYEjpw9/preview" type="audio/mp4">
+                         Your browser does not support the audio element.
+                     </audio>
+                 </div>
+             </div>
+            <a href="https://gidlerblog.blogspot.com/2025/08/the-quiet-drip-gen-z-guide-to-building.html" target="_blank" class="inline-block w-full sm:w-auto text-center bg-white text-blue-600 font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-gray-200 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 my-4">
+                Read The Book Here
+            </a>
+            <br>
+            <br>
+            <br>
+            <a href="#purchase" class="cta-button inline-block bg-white text-blue-700 font-bold py-4 px-10 rounded-full text-lg shadow-xl hover:bg-gray-200 transition-all duration-300">
+                Get Started Now
+            </a>
+        </div>
+    </header>
 
-    <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 rounded-xl">Unlock Your Financial Potential</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zM5 13a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Build Solid Wealth</h3>
-                    <p class="text-gray-600">Shift your focus from reckless spending to strategic asset acquisition. Our tracker helps you see the bigger picture.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Identify Your Habits</h3>
-                    <p class="text-gray-600">See exactly where your money is going with simple, clear visualizations. Make smarter, more intentional choices.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 12a2 2 0 114 0 2 2 0 01-4 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Achieve Financial Goals</h3>
-                    <p class="text-gray-600">Watch your net worth grow as you actively work toward your financial dreams. This is your path to freedom.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 rounded-xl">Unlock Your Financial Potential</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zM5 13a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Build Solid Wealth</h3>
+                    <p class="text-gray-600">Shift your focus from reckless spending to strategic asset acquisition. Our tracker helps you see the bigger picture.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Identify Your Habits</h3>
+                    <p class="text-gray-600">See exactly where your money is going with simple, clear visualizations. Make smarter, more intentional choices.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 12a2 2 0 114 0 2 2 0 01-4 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Achieve Financial Goals</h3>
+                    <p class="text-gray-600">Watch your net worth grow as you actively work toward your financial dreams. This is your path to freedom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Purchase Section -->
-    <section id="purchase" class="py-16 md:py-24 bg-gray-200">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4 rounded-xl">Get Your Personal FinanceTracker</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto rounded-lg">
-                Stop guessing about your finances and start building a better future today. Get your copy for a one-time fee.
-            </p>
-            <div class="p-6 bg-blue-50 rounded-2xl shadow-inner-lg">
-                <p class="text-gray-700 font-medium leading-relaxed mb-4">
-                    After payment, you'll be granted editor permission. Click the button below to get your own copy of the Financial Tracker & Statement in Google Sheets and follow the instructions for copying, publishing, and using.
-                </p>
-                <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-                    Get Your Copy Here
-                </a>
-            </div>
-            <div class="bg-white p-8 rounded-3xl shadow-lg max-w-md mx-auto">
-                <p class="text-4xl font-bold text-blue-700 mb-4 rounded-xl">UGX 11,000</p>
-                <p class="text-2xl text-gray-500 mb-6 rounded-xl">or USD $3.5</p>
-                <p class="text-sm text-gray-600 mb-4">You will be granted editor permission to copy, save, and publish the Google Sheet and Form for personal use.</p>
-                <p class="text-sm font-semibold mb-4 rounded-lg">Payment Methods:</p>
-                <p class="text-lg font-medium mb-4">
-                    <span class="text-blue-600 font-bold">Mobile Money:</span> +256742453863
-                </p>
-                <p class="text-lg font-medium mb-6">
-                    <span class="text-blue-600 font-bold">PayPal:</span> anzikofred@gmail.com
-                </p>
-                <button onclick="copyPaymentInfo()" class="cta-button w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300">
-                    Copy Payment Info
+        <section id="purchase" class="py-16 md:py-24 bg-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 rounded-xl">Get Your Personal FinanceTracker</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto rounded-lg">
+                Stop guessing about your finances and start building a better future today. Get your copy for a one-time fee.
+            </p>
+            <div class="p-6 bg-blue-50 rounded-2xl shadow-inner-lg mb-8">
+                <p class="text-gray-700 font-medium leading-relaxed mb-4">
+                    After payment, you'll be granted editor permission. Click the button below to add your financial tracker to your cart.
+                </p>
+                
+                <button
+                    class="cta-button w-full sm:w-auto bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    data-paypal-cart-item
+                    data-paypal-cart-item-id="PFT-001"
+                    data-paypal-cart-item-name="Personal FinanceTracker Tool"
+                    data-paypal-cart-item-price="3.50"
+                    data-paypal-cart-item-quantity="1">
+                    Add to Cart
                 </button>
-            </div>
-        </div>
-    </section>
+            </div>
+            
+            <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 rounded-xl">Simple & Seamless Setup</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="md:text-left text-center">
-                    <div class="mb-8">
-                        <div class="flex items-center justify-center md:justify-start mb-2">
-                            <span class="text-2xl font-bold text-blue-700 mr-2">1.</span>
-                            <h3 class="text-xl font-semibold">Get the Template</h3>
-                        </div>
-                        <div class="p-6 bg-blue-50 rounded-2xl shadow-inner-lg">
-                            <p class="text-gray-700 font-medium leading-relaxed mb-4">
-                                After payment, you'll be granted editor permission. Click the button below to get your own copy of the Financial Tracker & Statement in Google Sheets and follow the instructions for copying, publishing, and using.
-                            </p>
-                           <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-                        </div>
-                    </div>
-                    <div class="mb-8">
-                        <div class="flex items-center justify-center md:justify-start mb-2">
-                            <span class="text-2xl font-bold text-blue-700 mr-2">2.</span>
-                            <h3 class="text-xl font-semibold">Save Your Copy</h3>
-                        </div>
-                        <p class="text-gray-600">A new window will open. Save a copy to your Google Drive and you can start using it immediately.</p>
-                    </div>
-                    <div class="mb-8">
-                        <div class="flex items-center justify-center md:justify-start mb-2">
-                            <span class="text-2xl font-bold text-blue-700 mr-2">3.</span>
-                            <h3 class="text-xl font-semibold">Publish the Form</h3>
-                        </div>
-                        <p class="text-gray-600">In the top menu, click on the new "FinanceTrackerForm" menu item. Click on "Publish My Form" from the dropdown menu.Then, publish the form and the link will be sent to your gmail.</p>
-                    </div>
-                    <div>
-                        <div class="flex items-center justify-center md:justify-start mb-2">
-                            <span class="text-2xl font-bold text-blue-700 mr-2">4.</span>
-                            <h3 class="text-xl font-semibold">Start Tracking</h3>
-                        </div>
-                        <p class="text-gray-600">Save the link to your phone's home screen for instant access and start logging your daily transactions on the go.</p>
-                    </div>
-                </div>
-                <div class="w-full max-w-md mx-auto">
-                    <img src="https://placehold.co/500x300/e5e7eb/6b7280?text=Financial+Dashboard" alt="Financial Dashboard Mockup" class="rounded-xl shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="bg-white p-8 rounded-3xl shadow-lg max-w-md mx-auto mt-8">
+                <p class="text-4xl font-bold text-blue-700 mb-4 rounded-xl">UGX 11,000</p>
+                <p class="text-2xl text-gray-500 mb-6 rounded-xl">or USD $3.5</p>
+                <p class="text-sm text-gray-600 mb-4">You will be granted editor permission to copy, save, and publish the Google Sheet and Form for personal use.</p>
+                <p class="text-sm font-semibold mb-4 rounded-lg">Payment Methods:</p>
+                <p class="text-lg font-medium mb-4">
+                    <span class="text-blue-600 font-bold">Mobile Money:</span> +256742453863
+                </p>
+                <p class="text-lg font-medium mb-6">
+                    <span class="text-blue-600 font-bold">PayPal:</span> anzikofred@gmail.com
+                </p>
+                <button onclick="copyPaymentInfo()" class="cta-button w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300">
+                    Copy Payment Info
+                </button>
+            </div>
+        </div>
+    </section>
 
-    <!-- Contact & Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8">
-        <div class="container mx-auto px-4 text-center sm:text-left">
-            <div class="sm:flex sm:justify-between sm:items-center">
-                <h3 class="text-xl font-bold text-white mb-4 sm:mb-0">Personal FinanceTracker</h3>
-                <div class="sm:flex sm:items-center">
-                    <p class="flex items-center justify-center sm:justify-start mb-2 sm:mb-0 sm:mr-6">
-                        <svg class="w-5 h-5 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 11.233l7.997-5.349A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8V6a2 2 0 00-2-2H4a2 2 0 00-2 2v2l8 5.349L18 8z"/></svg>
-                        <a href="mailto:anzikofred@gmail.com" class="hover:underline">Email Us</a>
-                    </p>
-                    <p class="flex items-center justify-center sm:justify-start">
-                        <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM10 14a1 1 0 110-2 1 1 0 010 2zm0-6a1 1 0 011 1v2a1 1 0 11-2 0V9a1 1 0 011-1z"/></svg>
-                        <a href="https://wa.me/256742453863" class="hover:underline" target="_blank">WhatsApp Us</a>
-                    </p>
-                </div>
-            
-                <div class="mt-8 text-center sm:text-left">
-                    <a href="privacy.html" class="hover:underline mx-2">Privacy Policy</a>
-                    <span class="mx-2 text-gray-600">|</span>
-                    <a href="tc.html" class="hover:underline mx-2">Terms of Service</a>
-                    <p class="text-center sm:text-left text-sm text-gray-500 mt-4">&copy; <span id="current-year"></span> Personal FinanceTracker. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Custom Modal/Notification for Copying -->
-    <div id="notification-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center z-50">
-        <div class="bg-white p-6 rounded-lg shadow-xl text-center">
-            <h3 class="text-lg font-semibold mb-2">Copied!</h3>
-            <p class="text-gray-700">Payment information has been copied to your clipboard.</p>
-            <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">OK</button>
-        </div>
-    </div>
-    <script>
-  cartPaypal.Cart({ id: "pp-view-cart" })
-   </script>
+        <section id="how-it-works" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 rounded-xl">Simple & Seamless Setup</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="md:text-left text-center">
+                    <div class="mb-8">
+                        <div class="flex items-center justify-center md:justify-start mb-2">
+                            <span class="text-2xl font-bold text-blue-700 mr-2">1.</span>
+                            <h3 class="text-xl font-semibold">Get the Template</h3>
+                        </div>
+                        <div class="p-6 bg-blue-50 rounded-2xl shadow-inner-lg">
+                            <p class="text-gray-700 font-medium leading-relaxed mb-4">
+                                After payment, you'll be granted editor permission. Click the button below to get your own copy of the Financial Tracker & Statement in Google Sheets and follow the instructions for copying, publishing, and using.
+                            </p>
+                            <button
+                                class="cta-button w-full sm:w-auto bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                data-paypal-cart-item
+                                data-paypal-cart-item-id="PFT-001"
+                                data-paypal-cart-item-name="Personal FinanceTracker Tool"
+                                data-paypal-cart-item-price="3.50"
+                                data-paypal-cart-item-quantity="1">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-center justify-center md:justify-start mb-2">
+                            <span class="text-2xl font-bold text-blue-700 mr-2">2.</span>
+                            <h3 class="text-xl font-semibold">Save Your Copy</h3>
+                        </div>
+                        <p class="text-gray-600">A new window will open. Save a copy to your Google Drive and you can start using it immediately.</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-center justify-center md:justify-start mb-2">
+                            <span class="text-2xl font-bold text-blue-700 mr-2">3.</span>
+                            <h3 class="text-xl font-semibold">Publish the Form</h3>
+                        </div>
+                        <p class="text-gray-600">In the top menu, click on the new "FinanceTrackerForm" menu item. Click on "Publish My Form" from the dropdown menu.Then, publish the form and the link will be sent to your gmail.</p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-center md:justify-start mb-2">
+                            <span class="text-2xl font-bold text-blue-700 mr-2">4.</span>
+                            <h3 class="text-xl font-semibold">Start Tracking</h3>
+                        </div>
+                        <p class="text-gray-600">Save the link to your phone's home screen for instant access and start logging your daily transactions on the go.</p>
+                    </div>
+                </div>
+                <div class="w-full max-w-md mx-auto">
+                    <img src="https://placehold.co/500x300/e5e7eb/6b7280?text=Financial+Dashboard" alt="Financial Dashboard Mockup" class="rounded-xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        function copyPaymentInfo() {
-            const mobileMoney = "+256742453863";
-            const paypalEmail = "anzikofred@gmail.com";
-            const textToCopy = `Mobile Money: ${mobileMoney}\nPayPal: ${paypalEmail}`;
+        <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center sm:text-left">
+            <div class="sm:flex sm:justify-between sm:items-center">
+                <h3 class="text-xl font-bold text-white mb-4 sm:mb-0">Personal FinanceTracker</h3>
+                <div class="sm:flex sm:items-center">
+                    <p class="flex items-center justify-center sm:justify-start mb-2 sm:mb-0 sm:mr-6">
+                        <svg class="w-5 h-5 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 11.233l7.997-5.349A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8V6a2 2 0 00-2-2H4a2 2 0 00-2 2v2l8 5.349L18 8z"/></svg>
+                        <a href="mailto:anzikofred@gmail.com" class="hover:underline">Email Us</a>
+                    </p>
+                    <p class="flex items-center justify-center sm:justify-start">
+                        <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM10 14a1 1 0 110-2 1 1 0 010 2zm0-6a1 1 0 011 1v2a1 1 0 11-2 0V9a1 1 0 011-1z"/></svg>
+                        <a href="https://wa.me/256742453863" class="hover:underline" target="_blank">WhatsApp Us</a>
+                    </p>
+                </div>
+            
+                <div class="mt-8 text-center sm:text-left">
+                    <a href="privacy.html" class="hover:underline mx-2">Privacy Policy</a>
+                    <span class="mx-2 text-gray-600">|</span>
+                    <a href="tc.html" class="hover:underline mx-2">Terms of Service</a>
+                    <p class="text-center sm:text-left text-sm text-gray-500 mt-4">&copy; <span id="current-year"></span> Personal FinanceTracker. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+        <div id="notification-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl text-center">
+            <h3 class="text-lg font-semibold mb-2">Copied!</h3>
+            <p class="text-gray-700">Payment information has been copied to your clipboard.</p>
+            <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">OK</button>
+        </div>
+    </div>
+    <script>
+        cartPaypal.Cart({ id: "pp-view-cart" })
+    </script>
 
-            // Use the fallback for clipboard copy
-            const textArea = document.createElement("textarea");
-            textArea.value = textToCopy;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
+    <script>
+        function copyPaymentInfo() {
+            const mobileMoney = "+256742453863";
+            const paypalEmail = "anzikofred@gmail.com";
+            const textToCopy = `Mobile Money: ${mobileMoney}\nPayPal: ${paypalEmail}`;
 
-            // Show the custom notification modal
-            document.getElementById('notification-modal').classList.remove('hidden');
-            document.getElementById('notification-modal').classList.add('flex');
-        }
+            // Use the fallback for clipboard copy
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
 
-        function closeModal() {
-            document.getElementById('notification-modal').classList.add('hidden');
-            document.getElementById('notification-modal').classList.remove('flex');
-        }
-        
-        // This script handles the audio player functionality
-        window.onload = function() {
-            const audioPlayer = document.getElementById('audio-player');
-            const playButton = document.getElementById('play-audio-button');
-            const buttonText = document.getElementById('button-text');
-            const playIcon = document.getElementById('play-icon');
-            const pauseIcon = document.getElementById('pause-icon');
+            // Show the custom notification modal
+            document.getElementById('notification-modal').classList.remove('hidden');
+            document.getElementById('notification-modal').classList.add('flex');
+        }
 
-            // Play/Pause functionality on button click
-            playButton.addEventListener('click', function() {
-                if (audioPlayer.paused) {
-                    audioPlayer.play();
-                    buttonText.textContent = 'Pause';
-                    playIcon.classList.add('hidden');
-                    pauseIcon.classList.remove('hidden');
-                } else {
-                    audioPlayer.pause();
-                    buttonText.textContent = 'Listen Now';
-                    playIcon.classList.remove('hidden');
-                    pauseIcon.classList.add('hidden');
-                }
-            });
+        function closeModal() {
+            document.getElementById('notification-modal').classList.add('hidden');
+            document.getElementById('notification-modal').classList.remove('flex');
+        }
+        
+        // This script handles the audio player functionality
+        window.onload = function() {
+            const audioPlayer = document.getElementById('audio-player');
+            const playButton = document.getElementById('play-audio-button');
+            const buttonText = document.getElementById('button-text');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
 
-            // Reset button when audio ends
-            audioPlayer.addEventListener('ended', function() {
-                buttonText.textContent = 'Listen Now';
-                playIcon.classList.remove('hidden');
-                pauseIcon.classList.add('hidden');
-            });
+            // Play/Pause functionality on button click
+            playButton.addEventListener('click', function() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    buttonText.textContent = 'Pause';
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                } else {
+                    audioPlayer.pause();
+                    buttonText.textContent = 'Listen Now';
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                }
+            });
 
-            // Set the current year for the footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        };
-    </script>
+            // Reset button when audio ends
+            audioPlayer.addEventListener('ended', function() {
+                buttonText.textContent = 'Listen Now';
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            });
+
+            // Set the current year for the footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        };
+    </script>
 </body>
 </html>
