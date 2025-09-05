@@ -21,7 +21,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
-    <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="HBLKGKQMSYA98"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -103,21 +102,26 @@
             </p>
             <div class="p-6 bg-blue-50 rounded-2xl shadow-inner-lg mb-8">
                 <p class="text-gray-700 font-medium leading-relaxed mb-4">
-                    After payment, you'll be granted editor permission. Click the button below to add your financial tracker to your cart.
+                    After payment, you'll be granted editor permission. Click the button below to purchase your financial tracker.
                 </p>
-                <button
-                    class="cta-button w-full sm:w-auto bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                    data-paypal-cart-item
-                    data-paypal-cart-item-id="PFT-001"
-                    data-paypal-cart-item-name="Personal FinanceTracker Tool"
-                    data-paypal-cart-item-price="3.50"
-                    data-paypal-cart-item-quantity="1">
-                    Add to Cart
-                </button>
+                
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="anzikofred@gmail.com">
+                    <input type="hidden" name="item_name" value="Personal FinanceTracker Tool">
+                    <input type="hidden" name="amount" value="3.50">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="return" value="https://docs.google.com/spreadsheets/d/1Yvd37--PtqmLMWrme8Ng-saYigR3Oqfx7ZW1vNXOGUA/copy">
+                    <input type="hidden" name="cancel_return" value="[Your Cancellation URL]">
+                    <button
+                        type="submit"
+                        class="cta-button w-full sm:w-auto bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Buy Now with PayPal
+                    </button>
+                </form>
+
             </div>
             
-            <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-
             <div class="bg-white p-8 rounded-3xl shadow-lg max-w-md mx-auto mt-8">
                 <p class="text-4xl font-bold text-blue-700 mb-4 rounded-xl">UGX 11,000</p>
                 <p class="text-2xl text-gray-500 mb-6 rounded-xl">or USD $3.5</p>
@@ -232,9 +236,6 @@
         }
         
         window.onload = function() {
-            // This is the fix: call the PayPal function here after the element is loaded
-            cartPaypal.Cart({ id: "pp-view-cart" });
-
             const audioPlayer = document.getElementById('audio-player');
             const playButton = document.getElementById('play-audio-button');
             const buttonText = document.getElementById('button-text');
