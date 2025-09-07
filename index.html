@@ -125,11 +125,8 @@
             <div class="bg-white p-8 rounded-3xl shadow-lg max-w-md mx-auto mt-8">
                 <p class="text-4xl font-bold text-blue-700 mb-4 rounded-xl">UGX 11,000</p>
                 <p class="text-2xl text-gray-500 mb-6 rounded-xl">or USD $3.5</p>
-                <p class="text-sm text-gray-600 mb-4">You will be granted editor permission to copy, save, and publish the Google Sheet and Form for personal use.</p>
-                /* <p class="text-sm font-semibold mb-4 rounded-lg">Payment Methods:</p>
-                <p class="text-lg font-medium mb-4">
-                    <span class="text-blue-600 font-bold">Mobile Money Payment:</span> +256742453863
-                </p>
+                <p class="text-sm text-gray-600 mb-4"> Pay using above PayPal button, You will automatically be granted Permission to copy, save, and publish the Google Sheet and Form for personal use.</p>
+                <p class="text-sm font-semibold mb-4 rounded-lg"> Other Payment Methods:</p>
                 <p class="text-lg font-medium mb-4">
                     <span class="text-blue-600 font-bold">Mobile Money Payment:</span> +256742453863
                     <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM10 14a1 1 0 110-2 1 1 0 010 2zm0-6a1 1 0 011 1v2a1 1 0 11-2 0V9a1 1 0 011-1z"/></svg>
@@ -137,8 +134,7 @@
                 </p>
                 <button onclick="copyPaymentInfo()" class="cta-button w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:bg-blue-700 transition-all duration-300">
                     Copy Payment Info
-                </button> 
-                */
+                </button>
             </div>
         </div>
     </section>
@@ -219,8 +215,7 @@
     <script>
         function copyPaymentInfo() {
             const mobileMoney = "+256742453863";
-            const paypalEmail = "anzikofred@gmail.com";
-            const textToCopy = `Mobile Money: ${mobileMoney}\nPayPal: ${paypalEmail}`;
+            const textToCopy = `Mobile Money: ${mobileMoney}`;
 
             const textArea = document.createElement("textarea");
             textArea.value = textToCopy;
